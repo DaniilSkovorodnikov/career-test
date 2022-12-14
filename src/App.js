@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App" style={{height: isOnPageResults ? "min-content" : "100%"}}>
-        <BrowserRouter>
+        <BrowserRouter basename="/career-test">
             <Context.Provider value={{currentQuestion, setCurrentQuestion, userAnswers,
                 setUserAnswers, interestScores, abilityScores, currentSection, setCurrentSection, setIsOnPageResults}}>
                 <Routes>
