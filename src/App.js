@@ -22,11 +22,11 @@ function App() {
             <Context.Provider value={{currentQuestion, setCurrentQuestion, userAnswers,
                 setUserAnswers, interestScores, abilityScores, currentSection, setCurrentSection, setIsOnPageResults}}>
                 <Routes>
-                    <Route path="*/" element={<div className="App__questions">
+                    <Route path="/" element={<div className="App__questions">
                         <Question question={questions[currentQuestion]} answers={answers.getAnswer(currentQuestion)}/>
                         <ProgressBar currentQuestion={currentQuestion}/>
                     </div>}/>
-                    <Route path="*/results" element={<Result interestScores={interestScores} abilityScores={abilityScores}/>}/>
+                    <Route path="/results" element={<Result interestScores={interestScores} abilityScores={abilityScores}/>}/>
                 </Routes>
             </Context.Provider>
         </BrowserRouter>
